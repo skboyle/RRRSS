@@ -65,10 +65,6 @@ Before getting started, ensure you have the following installed:
 3. Visit localhost:3000
 
 #### Test Backend
-    ```
-    Rspec
-    ```
+    `Rspec`
 #### Test Frontend
-    ```
-    Yarn Test
-    ```
+    `Yarn Test`
