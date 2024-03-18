@@ -1,20 +1,22 @@
 # RRRSS Feed
 
 This is a Ruby on Rails & React RSS Feed Reader.
-Currently showing a Slashdot feed.
-Users can view a list of posts and click them to view more details. Users can also make artiles as 'Read' or 'Unread'
+- Currently showing a Slashdot feed.
+- Users can view a list of posts and click them to view more details. 
+- Users can also make artiles as 'Read' or 'Unread'
 
 Future update will include adding your own RSS feed urls.
+
 ## Getting Started
 
 ### Prerequisites
 
 Before getting started, ensure you have the following installed:
 
-- Ruby (version x.x.x)
-- Rails (version x.x.x)
-- SQLite (or your preferred database)
-
+- Ruby (version 3.2.1)
+- Rails (version 7.1.3)
+- SQLite
+  
 ### Installation
 
 1. Clone the repository:
