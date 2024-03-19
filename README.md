@@ -70,3 +70,7 @@ Before getting started, ensure you have the following installed:
     rspec
 #### Test Frontend
     yarn test
+
+<img width="1727" alt="Screenshot 2024-03-19 at 10 09 18 AM" src="https://github.com/skboyle/RRRSS/assets/31743695/6c465072-811a-48b7-ad20-d82bda4519fd">
+<img width="1727" alt="Screenshot 2024-03-19 at 10 09 31 AM" src="https://github.com/skboyle/RRRSS/assets/31743695/09debace-2a59-4d6c-ad82-da9b78ece50b">
+
