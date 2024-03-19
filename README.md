@@ -62,11 +62,11 @@ Before getting started, ensure you have the following installed:
 
 2. Start Server:
     ```
-    Yarn Start
+    yarn start
     ```
 3. Visit localhost:3000
 
 #### Test Backend
-    Rspec
+    rspec
 #### Test Frontend
-    Yarn Test
+    yarn test
