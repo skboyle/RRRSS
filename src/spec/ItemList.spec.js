@@ -6,7 +6,7 @@ import ItemList from '../components/ItemList';
 import { updateItemReadStatus } from '../services/api'; 
 
 
-jest.mock('../services/api'); // Mock the entire module
+jest.mock('../services/api');
 
 describe('ItemList', () => {
 

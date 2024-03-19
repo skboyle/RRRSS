@@ -2,18 +2,17 @@ import { fetchItems, fetchItemDetails, updateItemReadStatus } from '../services/
 
 describe('API functions', () => {
   beforeEach(() => {
-    global.fetch = jest.fn(); // Mock the fetch function
+    global.fetch = jest.fn();
   });
 
   afterEach(() => {
-    jest.clearAllMocks(); // Clear all mocks after each test
+    jest.clearAllMocks();
   });
 
   test('fetchItems - success', async () => {
-    // Mock successful fetch response
     global.fetch.mockResolvedValueOnce({
       ok: true,
-      json: async () => [{ id: '1', title: 'Item 1' }, { id: '2', title: 'Item 2' }], // Sample data
+      json: async () => [{ id: '1', title: 'Item 1' }, { id: '2', title: 'Item 2' }],
     });
 
     const items = await fetchItems();
@@ -29,10 +28,9 @@ describe('API functions', () => {
   });
 
   test('fetchItemDetails - success', async () => {
-    // Mock successful fetch response
     global.fetch.mockResolvedValueOnce({
       ok: true,
-      json: async () => ({ id: '1', title: 'Item 1' }), // Sample data
+      json: async () => ({ id: '1', title: 'Item 1' }),
     });
 
     const item = await fetchItemDetails('1');
@@ -50,10 +48,9 @@ describe('API functions', () => {
   test('updateItemReadStatus - success', async () => {
     const callback = jest.fn();
 
-    // Mock successful fetch response
     global.fetch.mockResolvedValueOnce({
       ok: true,
-      json: async () => ({ id: '1', read: 'Read' }), // Sample data
+      json: async () => ({ id: '1', read: 'Read' }),
     });
 
     await updateItemReadStatus('1', 'Read', callback);
