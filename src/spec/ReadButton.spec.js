@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import ReadButton from '../components/ReadButton'; // Adjust the path as needed
+import ReadButton from '../components/ReadButton';
 
 // Mock item data
 const mockItem = {

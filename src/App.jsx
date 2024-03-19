@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom'; // Import useParams
+import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import ItemList from './components/ItemList';
 import ItemDetails from './components/ItemDetails';
 import { fetchItems } from './services/api';
@@ -35,7 +35,6 @@ const App = () => {
                         path="/"
                         element={<ItemList items={items} onUpdateItem={handleUpdateItem} />}
                     />
-                    {/* Use useParams to get the id parameter */}
                     <Route path="/feed_items/:id" element={<ItemDetailsWrapper />} />
                 </Routes>
             </BrowserRouter>
@@ -43,7 +42,6 @@ const App = () => {
     );
 };
 
-// Create a wrapper component to extract the id parameter using useParams
 const ItemDetailsWrapper = () => {
     const { id } = useParams();
     console.log('ID:', id);

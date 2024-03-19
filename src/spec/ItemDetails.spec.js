@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
-import ItemDetails from '../components/ItemDetails'; // Import only the ItemDetails component
-import { fetchItemDetails } from '../services/api'; // Import the fetchItemDetails function separately
+import ItemDetails from '../components/ItemDetails';
+import { fetchItemDetails } from '../services/api'; 
 
 // Mock the fetchItemDetails function directly from the ItemDetails component
 jest.mock('../services/api', () => ({
@@ -9,7 +9,6 @@ jest.mock('../services/api', () => ({
     id: '0',
     title: 'Sample Title',
     read: 'Unread',
-    // Other properties...
   }),
   updateItemReadStatus: jest.fn(),
 }));

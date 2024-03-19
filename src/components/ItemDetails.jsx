@@ -5,7 +5,7 @@ import ReadButton from './ReadButton';
 import CustomRichTextRenderer from './CustomRichTextRenderer';
 
 const ItemDetails = () => {
-    const { id } = useParams(); // Ensure that useParams is correctly extracting the id parameter
+    const { id } = useParams();
     const [item, setItem] = useState(null);
 
     const fetchData = async () => {

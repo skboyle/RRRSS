@@ -7,11 +7,9 @@ import FormatDate from './FormatDate';
 const ItemList = ({ items, onUpdateItem }) => {
     const handleUpdateReadStatus = async (item) => {
         try {
-            // Update the item read status
             const newReadStatus = item.read === 'Read' ? 'Unread' : 'Read';
 
             const updatedItem = await updateItemReadStatus(item.id, newReadStatus, () => {});
-            // Call the onUpdateItem function to update the state
             onUpdateItem(updatedItem);
         } catch (error) {
             console.error('Error updating read status:', error);
@@ -38,7 +36,6 @@ const ItemList = ({ items, onUpdateItem }) => {
                                     item={item}
                                     onUpdateRead={() => handleUpdateReadStatus(item)}
                                 />
-                                {/* <footer className="blockquote-footer">{item.creator}</footer> */}
                             </div>
                         </div>
                     </li>

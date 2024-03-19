@@ -47,13 +47,13 @@ RSpec.describe FeedItemsController, type: :controller do
 
     context 'with valid parameters' do
       it 'updates the requested feed item' do
-        patch :update, params: { id: feed_item.id, feed_item: { read: 'Read' } } # Updated 'Read' to a string
+        patch :update, params: { id: feed_item.id, feed_item: { read: 'Read' } }
         feed_item.reload
-        expect(feed_item.read).to eq('Read') # Updated to check for string value
+        expect(feed_item.read).to eq('Read') 
       end
 
       it 'returns a success response' do
-        patch :update, params: { id: feed_item.id, feed_item: { read: 'Unread' } } # Updated 'Unread' to a string
+        patch :update, params: { id: feed_item.id, feed_item: { read: 'Unread' } }
         expect(response).to be_successful
       end
     end
