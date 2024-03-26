@@ -28,7 +28,8 @@ const App = () => {
     };
 
     return (
-        <div className="App container-sm">
+        <div className="App container-sm" style={{maxWidth: '800px'}}>
+            <h1 style={{ margin: 50, textAlign: 'center', alignContent: 'center' }}>/.Slashdot RSS Reader</h1>
             <BrowserRouter>
                 <Routes>
                     <Route

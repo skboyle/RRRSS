@@ -18,7 +18,6 @@ const ItemList = ({ items, onUpdateItem }) => {
 
     return (
         <div>
-            <h1 style={{ margin: 50, textAlign: 'center', alignContent: 'center' }}>/.Slashdot RSS Reader</h1>
             <ul style={{ listStyleType: 'none', margin: 'auto' }}>
                 {items && items.map(item => (
                     <li key={item.id} style={{ margin: 10 }}>
