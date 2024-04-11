@@ -17,7 +17,6 @@ const ItemDetails = () => {
             setItem(data);
         } catch (error) {
             console.error('Error fetching item details:', error);
-
         }
     };
 
@@ -41,24 +40,29 @@ const ItemDetails = () => {
     }, [id]);
 
     if (!item) {
-        return <div>Loading...</div>;
+        return <div className="text-center mt-8">Loading...</div>;
     }
 
     return (
-        <div className="card text-dark bg-light mb-3" style={{ margin: "auto", marginTop: 20, padding: "10px", maxWidth: '100rem' }}>
-            <h2>{item.title}</h2>
+        <div className="container mx-auto px-4 py-8 max-w-3xl">
+            <h2 className="text-2xl font-bold mb-4">{item.title}</h2>
             <CustomRichTextRenderer text={item.description} />
-            <p>Creator: {item.creator} | Publication Date: {new Date(item.publication_date).toLocaleDateString()}</p>
-            <p>Subject: {item.subject} | Section: {item.section}</p>
-            <p>Department: {item.department} | Comments: {item.comments}</p>
-            <ReadButton
-                item={item}
-                onUpdateRead={updateReadStatus}
-            />
+            <div className="mt-4">
+                <p className="text-sm text-gray-600">
+                    Creator: {item.creator} | Publication Date: {new Date(item.publication_date).toLocaleDateString()}
+                </p>
+                <p className="text-sm text-gray-600">
+                    Subject: {item.subject} | Section: {item.section}
+                </p>
+                <p className="text-sm text-gray-600">
+                    Department: {item.department} | Comments: {item.comments}
+                </p>
+            </div>
+            <div className="mt-4">
+                <ReadButton item={item} onUpdateRead={updateReadStatus} />
+            </div>
         </div>
     );
 };
 
 export default ItemDetails;
-
-

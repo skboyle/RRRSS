@@ -28,17 +28,21 @@ const App = () => {
     };
 
     return (
-        <div className="App container-sm" style={{maxWidth: '800px'}}>
-            <h1 style={{ margin: 50, textAlign: 'center', alignContent: 'center' }}>/.Slashdot RSS Reader</h1>
-            <BrowserRouter>
-                <Routes>
-                    <Route
-                        path="/"
-                        element={<ItemList items={items} onUpdateItem={handleUpdateItem} />}
-                    />
-                    <Route path="/feed_items/:id" element={<ItemDetailsWrapper />} />
-                </Routes>
-            </BrowserRouter>
+        <div className="App">
+            <div className="bg-blue-600">
+                <h1 className="text-white text-center py-4 text-4xl font-bold">/Slashdot RSS Reader</h1>
+            </div>
+            <div className="container mx-auto px-4">
+                <BrowserRouter>
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={<ItemList items={items} onUpdateItem={handleUpdateItem} />}
+                        />
+                        <Route path="/feed_items/:id" element={<ItemDetailsWrapper />} />
+                    </Routes>
+                </BrowserRouter>
+            </div>
         </div>
     );
 };
@@ -50,6 +54,3 @@ const ItemDetailsWrapper = () => {
 };
 
 export default App;
-
-
-

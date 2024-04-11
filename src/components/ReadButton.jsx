@@ -7,8 +7,14 @@ const ReadButton = ({ item, onUpdateRead }) => {
     }
 
     return (
-        <div className="d-grid gap-2">
-            <button className="btn btn-primary" type="button" data-testid={`read-button-${item.id}`} onClick={handleClick}>
+        <div>
+            <button 
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                style={{ marginBottom: 10 }} 
+                type="button" 
+                data-testid={`read-button-${item.id}`} 
+                onClick={handleClick}
+            >
                 {item.read}
             </button>
         </div>
@@ -16,4 +22,3 @@ const ReadButton = ({ item, onUpdateRead }) => {
 }
 
 export default ReadButton;
-
